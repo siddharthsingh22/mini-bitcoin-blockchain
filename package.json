@@ -10,12 +10,18 @@
 	"license": "ISC",
 	"dependencies": {
 		"@types/body-parser": "^1.19.0",
+		"@types/elliptic": "^6.4.12",
+		"axios": "^0.20.0",
 		"body-parser": "^1.19.0",
+		"chalk": "^4.1.0",
+		"cors": "^2.8.5",
 		"crypto-js": "^4.0.0",
 		"dat-swarm-defaults": "^1.0.2",
 		"discovery-swarm": "^6.1.0",
+		"elliptic": "^6.5.3",
 		"express": "^4.17.1",
 		"get-port": "^5.1.1",
+		"uuid": "^8.3.0",
 		"ws": "^7.3.1"
 	},
 	"devDependencies": {

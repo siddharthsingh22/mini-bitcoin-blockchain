@@ -1,4 +1,6 @@
 const { Block } = require("./block");
+const chalk = require("chalk");
+const log = console.log;
 
 export class Blockchain {
     constructor(public chain: any[]) {
@@ -23,14 +25,17 @@ export class Blockchain {
     }
     replaceChain(newChain: any[]) {
         if (newChain.length <= this.chain.length) {
-            console.log("Incoming chain is not longer than the current chain");
-            return;
+            log(chalk.red.bgWhite("Incoming chain is not longer than the current chain"));
+            return false;
         } else if (!this.isChainValid(newChain)) {
-            console.log("Incoming chain is invalid");
-            return;
+            log(chalk.red.bgWhite("Incoming chain is invalid"));
+            return false;
         }
-        console.log("Replacing the existing chain with the incoming chain");
+        log(chalk.greenBright.bold.bgWhite("Replacing the Existing Chain With the Incoming Chain"));
         this.chain = newChain;
-        console.log("Successfully replaced the existing chain");
+        log(chalk.greenBright.bold.bgWhite("Successfully Replaced the Existing Chain"));
+        log(chalk.greenBright.bold.bgWhite("State of Latest Chain"));
     }
 }
+
+export { }
